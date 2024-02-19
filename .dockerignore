@@ -1,0 +1,71 @@
+**/.DS_Store
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+**/__pycache__
+*.py[cod]
+*$py.class
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.*
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+**/tests/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+**/.env
+**/.env.example
+**/.venv
+**/env/
+**/venv/
+**/ENV/
+**/env.bak/
+**/venv.bak/
+
+### Python Patch ###
+# Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
+poetry.toml
+
+**/.git
+**/.github
+**/.vscode
+**/.vs
+**/.tool-versions
+**/.flake8
+**/.gitignore
+**/.pre-commit-config.yaml
+**/.dockerignore
+**/chart
+**/charts
+**/docker-compose*
+**/compose*
+**/Dockerfile*
+**/secrets.dev.yaml
+**/values.dev.yaml
+LICENSE
+README.md
+poetry.lock
+Pipfile
+
+assets/
+artifacts/
+# Comment the line below to include model files in the Docker image
+# and uncomment the 'COPY ./model_files ./model_files' line in the `Dockerfile` file.
+# model_files/

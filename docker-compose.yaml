@@ -1,0 +1,20 @@
+version: "3"
+services:
+  nova-bootstrap:
+    image: nova-bootstrap:latest
+    build:
+      context: .
+      platforms:
+        - "linux/amd64"
+    container_name: nova-bootstrap
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      NOVA_SPECTRAL_API_KEY: "${NOVA_SPECTRAL_API_KEY}"
+      NOVA_ALCHEMY_API_KEY: "${NOVA_ALCHEMY_API_KEY}"
+      NOVA_CLI_WALLET_PRIVATE_KEY: "${NOVA_CLI_WALLET_PRIVATE_KEY}"
+      NOVA_MODEL_FILES_PATH: "${NOVA_MODEL_FILES_PATH}"
+    volumes:
+      - ./model_files:/etc/nova/model_files
+      - ./artifacts:/var/nova/artifacts
