@@ -11,6 +11,7 @@ def main():
     print("Preparing ZIP archive...")
     with zipfile.ZipFile(ZIP_FILE_PATH, "w") as zip_file:
         zip_file.write("runner.py")
+        zip_file.write("modeler-requirements.txt")
         for root, dirs, files in os.walk(MODEL_FILES_PATH):
             for file in files:
                 zip_file.write(

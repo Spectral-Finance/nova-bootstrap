@@ -9,11 +9,9 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
 # Overview
-Nova is a back-end service template for the Consumption phase in Spectral's ML challenges written in Python.
-Most of the logic to fetch and reply to inference requests is implemented for you so you don't have to.
+Nova is a back-end service template written in Python. Most of the logic to fetch and reply to inference requests is implemented for you so you don't have to.
 What's left for you as a Modeler to implement is the data pre and post-processing. Depending on what your model expects, you can scale, transform, and reorder features before they are fed into the compiled model and you can do the same with the inference output before submitting it to the blockchain.
-Nova will automatically look for new inference requests, fetch features for a specific input in the form of a Pandas DataFrame, call your data pre-processing function, generate an inference using the compiled model you provided, call your inference post-processing function and submit the result to the blockchain on your behalf.
-In the meanwhile Nova also looks for inference proof requests. Once proof is requested, Nova will use the witness files saved during the inference process, your compiled model and other EZKL supporting files to create an EZKL proof and will submit it to the blockchain.
+Nova will automatically look for new inference requests, fetch features for a specific input in the form of a Pandas DataFrame, call your data pre-processing function, generate an inference using the compiled model you provided, call your inference post-processing function, and submit the result to the blockchain on your behalf. In the meantime, Nova also looks for inference proof requests. Once proof is requested, Nova will use the witness files saved during the inference process, your compiled model, and other EZKL supporting files to create an EZKL proof and will submit it to the blockchain.
 
 > [!WARNING]
 > This software is provided "as is" and without any express or implied warranties.
@@ -27,7 +25,7 @@ In the meanwhile Nova also looks for inference proof requests. Once proof is req
     ```bash
     git clone https://github.com/Spectral-Finance/nova-bootstrap.git
     ```
-2. Add the dependencies you need to `requirements.txt`.
+2. Add the dependencies you need to `modeler-requirements.txt`.
 3. Implement your data pre and post processing
     - change the `pre_process` and optionally the `post_process` function content inside the `runner.py` module.
 4. Build and tag a Docker image:
