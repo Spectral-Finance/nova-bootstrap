@@ -1,4 +1,4 @@
-FROM nova:latest as base
+FROM public.ecr.aws/g7t7a1t4/nova:latest as base
 
 # Set the working directory in the container
 WORKDIR /usr/src/app

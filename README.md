@@ -36,6 +36,13 @@ Nova will automatically look for new inference requests, fetch features for a sp
     - remember to set the required environment variables before launching your container (See [HERE](#environment-variables)).
 
 
+## Prepare ZIP file for deployment (Spectral-hosting only)
+Simply run:
+```bash
+make zip
+```
+the command will create an `upload.zip` file
+
 ## Compiled model and supporting files
 
 For Nova to function properly you must provide a few additional files:
